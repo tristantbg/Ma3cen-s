@@ -64,15 +64,6 @@ $(function() {
             }).to(wp, wpRotationTime, {
                 scaleX: 1
             });
-            var circleDrag = Draggable.create(circle, {
-                type: "rotation",
-                throwProps: true
-            });
-            $('.about').hover(function() {
-                $page_content.addClass('peekview');
-            }, function() {
-                $page_content.removeClass('peekview');
-            });
         },
         loadContent: function(url, target) {
             $(target).load(url + ' #wrapper', function(response) {});
