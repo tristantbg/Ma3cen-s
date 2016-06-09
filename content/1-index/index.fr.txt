@@ -1,0 +1,30 @@
+Title: Accueil
+
+----
+
+Partners: 
+
+- 
+  name: Entreprise du Patrimoine Vivant
+  image: epv.png
+  link: http://www.patrimoine-vivant.com
+- 
+  name: Région Île-de-France
+  image: idf.png
+  link: https://www.iledefrance.fr
+- 
+  name: Les Grands Ateliers de France
+  image: atelierdarts.png
+  link: http://www.grandsateliersdefrance.com
+- 
+  name: "Institut National des Métiers d'Art"
+  image: inma.png
+  link: http://www.institut-metiersdart.org
+- 
+  name: Ministère de la Culture
+  image: culture.png
+  link: http://www.culturecommunication.gouv.fr/
+
+----
+
+Bg: home.jpg

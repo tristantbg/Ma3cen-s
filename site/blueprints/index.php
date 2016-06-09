@@ -1,6 +1,6 @@
 <?php if(!defined('KIRBY')) exit ?>
 
-title: Home
+title: Index
 pages: false
 files: true
 fields:

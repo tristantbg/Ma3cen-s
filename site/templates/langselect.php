@@ -9,7 +9,7 @@
 			<ul>
 				<?php foreach($site->languages() as $language): ?>
 					<li<?php e($site->language() == $language, ' class="active"') ?>>
-					<a href="<?php echo $pages->find('home')->url($language->code()) ?>">
+					<a href="<?php echo $pages->find('index')->url($language->code()) ?>" data-title="<?php echo $pages->find('index')->title($language->code()) ?>" data-target="page">
 						<h3><?php echo html($language->name()) ?></h3>
 					</a>
 				</li>

@@ -65,7 +65,7 @@
 				</a></span>
 
 				<span class="logo">
-					<a href="<?php echo $pages->find('home')->url() ?>" data-title="<?php echo $pages->find('home')->title()->html() ?>" data-target="index">
+					<a href="<?php echo $pages->find('index')->url() ?>" data-title="<?php echo $pages->find('index')->title()->html() ?>" data-target="index">
 						<img src="<?php echo $site->image($site->logo())->resize(300)->url() ?>" alt="<?php echo $site->title()->html() ?>" width="100%" height="auto">
 					</a>
 				</span>
@@ -74,7 +74,7 @@
 					<ul>
 						<?php foreach($site->languages() as $language): ?>
 							<li<?php e($site->language() == $language, ' class="active"') ?>>
-							<a href="<?php echo $pages->find('home')->url($language->code()) ?>">
+							<a href="<?php echo $pages->find('index')->url($language->code()) ?>">
 							<h3><?php echo html($language->code()) ?></h3>
 							</a>
 						</li>

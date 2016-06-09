@@ -32,48 +32,26 @@ $(function() {
             $(window).resize(function(event) {});
             $(document).ready(function($) {
                 $body = $('html, body');
-                $page_content = $('.page_content');
+                $container = $('.wrapper');
                 History.Adapter.bind(window, 'statechange', function() {
                     var State = History.getState();
                     console.log(State);
                     var content = State.data;
                     if (content.type == 'page') {
-                        TweenMax.fromTo($('.intro .logo .wrap'), 1, {
-                            autoAlpha: 1,
-                            scale: 1,
-                            rotation: 0
-                        }, {
-                            scale: 0,
-                            rotation: logoRotation,
-                            ease: Back.easeIn.config(1.2)
-                        });
-                        setTimeout(function() {
-                            $body.addClass('page');
-                            $page_content.removeClass('closed');
-                        }, 630);
+                        $body.addClass('page');
+                        app.loadContent(State.url + '/ajax', $container);
+                    } else if(content.type == 'index') {
+                        app.loadContent(State.url + '/ajax', $container);
                     } else {
-                        $body.removeClass('page');
-                        setTimeout(function() {
-                            $page_content.addClass('closed');
-                        }, 1000);
-                        setTimeout(function() {
-                            TweenMax.fromTo($('.intro .logo .wrap'), 1, {
-                                scale: 0,
-                                rotation: logoRotation
-                            }, {
-                                autoAlpha: 1,
-                                scale: 1,
-                                rotation: 0,
-                                ease: Back.easeOut.config(1.2)
-                            });
-                        }, 200);
+                      $body.removeClass('page');
+                      alert('home');
                     }
                 });
-                $('[data-target]').bind('click', function(e) {
+                $('body').on('click', '[data-target]', function(e) {
                     $el = $(this);
                     e.preventDefault();
                     if ($el.data("target") == 'index') {
-                        app.goIndex();
+                        app.goIndex($el.attr('href'));
                     } else {
                         History.pushState({
                             type: 'page'
@@ -84,10 +62,10 @@ $(function() {
             app.introAnim();
             app.sidebarAnim();
         },
-        goIndex: function() {
+        goIndex: function(state) {
             History.pushState({
                 type: 'index'
-            }, $site_title, window.location.origin + $root);
+            }, $site_title, state);
         },
         introAnim: function() {
             var circle = $('.intro .circle');

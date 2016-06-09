@@ -1,6 +1,6 @@
 <?php if(!defined('KIRBY')) exit ?>
 
-title: Language selector
+title: Landing
 pages: false
 files: false
 deletable: false

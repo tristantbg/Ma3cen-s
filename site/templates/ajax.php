@@ -1,4 +1,11 @@
-<?php if ($page->content()->name() == "index"): ?>
+<?php
+if(kirby()->request()->ajax()) {
+	$pageMaster = page($uri);
+	$page = $pageMaster->content($lang);
+	$site = site();
+	?>
+
+<?php if ($pageMaster->content()->name() == "index"): ?>
 	
 	<?php if(!$page->bg()->empty()):?>
 		<div class="background" style="background-image: url('<?php echo $page->bg()->toFile()->bw()->url() ?>')">
@@ -10,7 +17,7 @@
 
 		<div class="container">
 
-			<?php $sitePages = $pages->find('pages')->children()->visible() ?>
+			<?php $sitePages = page('pages')->children()->visible() ?>
 			<div class="pages">
 				<?php foreach ($sitePages as $key => $p): ?>
 					<div class="page-title">
@@ -58,7 +65,7 @@
 		</div>
 
 		<div class="close-btn">
-		<a href="<?php echo $pages->find('index')->url() ?>" data-title="<?php echo $pages->find('index')->title()->html() ?>" data-target="index">
+		<a href="<?php echo page('index')->url() ?>" data-title="<?php echo page('index')->title()->html() ?>" data-target="index">
 			<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 			viewBox="0 0 25 25" style="enable-background:new 0 0 25 25;" xml:space="preserve">
 			<style type="text/css">
@@ -81,3 +88,9 @@
 </section>
 
 <?php endif ?>
+
+<?php
+}
+else {
+	header::status('404');
+}
