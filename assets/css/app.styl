@@ -1,0 +1,95 @@
+@import 'nib'
+@import '../../node_modules/jeet/stylus/jeet'
+@import '_mixins.styl'
+@import 'normalize.css'
+@import '../oembed/oembed.css'
+
+// Media queries
+$desktop = 1600px
+$laptop = 1100px
+$tablet = 768px
+$mobile = 400px
+
+// Colors
+$primary ?= #fff
+$secondary ?= #000
+
+// Metrics
+$padding = 30px
+
+fontsize()
+	font-size 2.4vw
+	+below($laptop)
+		font-size 2.7vw
+	+below($tablet)
+		font-size 2.5em
+
+// CSS Reset
+global-reset()
+
+webfont('AG', 'AG', true, 'bold')
+	
+body,html
+	width 100%
+	height 100%
+	background-color $primary
+	-webkit-text-size-adjust 100%
+	font-family 'M', 'Helvetica', 'Arial', serif
+	+below($tablet)
+		overflow hidden
+
+body
+	text-rendering optimizeLegibility
+	font-smoothing()
+	font-size 62.5%
+
+p
+	font-size 1em
+	margin-bottom 1em
+	line-height 1.1em
+	+below($tablet)
+		font-size 1.4em
+	+above($laptop)
+		font-size 0.7vw
+
+p:last-child
+	margin-bottom 0
+	
+
+::selection
+	background $secondary
+	
+::-moz-selection
+	background $secondary
+
+*
+	hideselect()
+
+a, a:hover, a:visited, a:focus
+	color inherit
+	text-decoration none
+	cursor pointer
+
+h1, h2, footer
+	text-transform uppercase
+
+h1
+	fontsize()
+
+h2
+	font-size 1em
+
+.loader
+	position fixed
+	width 100%
+	height 100%
+	top 0
+	left 0
+	background $primary
+	//background $primary url('../images/loader.gif') center no-repeat
+	background-size 15px
+	z-index 10000
+
+.wrapper
+	width 100%
+	height 100%

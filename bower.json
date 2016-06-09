@@ -1,0 +1,11 @@
+{
+  "name": "mae",
+  "description": "Ma3cenAs",
+  "version": "1.0.0",
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "underscore": "^1.8.3",
+    "gsap": "^1.18.5",
+    "history.js": "^1.8.0"
+  }
+}
