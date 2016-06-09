@@ -29,6 +29,24 @@ of the system, please check out http://getkirby.com/docs/advanced/options
 
 */
 
+c::set('home', 'landing');
+
+c::set('languages', array(
+  array(
+    'code'    => 'fr',
+    'name'    => 'Français',
+    'default' => true,
+    'locale'  => 'fr_FR',
+    'url'     => '/fr',
+  ),
+  array(
+    'code'    => 'en',
+    'name'    => 'English',
+    'locale'  => 'en_US',
+    'url'     => '/en',
+  )
+));
+
 c::set('oembed.lazyvideo', true);
 c::set('autopublish.templates', array('project', 'item'));
 c::set('sitemap.exclude', array('error'));

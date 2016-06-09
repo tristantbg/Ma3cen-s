@@ -10,32 +10,32 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<link rel="canonical" href="<?php echo html($page->url()) ?>" />
 	<?php if($page->isHomepage()): ?>
-      <title><?php echo $site->title()->html() ?></title>
-    <?php else: ?>
-      <title><?php echo $site->title()->html() ?> | <?php echo $page->title()->html() ?></title>
-    <?php endif ?>
+		<title><?php echo $site->title()->html() ?></title>
+	<?php else: ?>
+		<title><?php echo $site->title()->html() ?> | <?php echo $page->title()->html() ?></title>
+	<?php endif ?>
 	<meta name="description" content="<?php echo $site->description()->html() ?>">
 	<meta name="robots" content="index,follow" />
 	<meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
 	<meta name="DC.Title" content="<?php echo $page->title()->html() ?>" />
-    <meta name="DC.Description" content="<?php echo $page->description()->html() ?>"/ >
-    <?php if($page->isHomepage()): ?>
-      <meta property="og:title" content="<?php echo $site->title()->html() ?>" />
-    <?php else: ?>
-      <meta property="og:title" content="<?php echo $site->title()->html() ?> | <?php echo $page->title()->html() ?>" />
-    <?php endif ?>
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="<?php echo html($page->url()) ?>" />
-    <?php if(!$site->ogimage()->empty()): ?>
-	<meta property="og:image" content="<?= $site->ogimage()->toFile()->width(1200)->url() ?>"/>
+	<meta name="DC.Description" content="<?php echo $page->description()->html() ?>"/ >
+	<?php if($page->isHomepage()): ?>
+		<meta property="og:title" content="<?php echo $site->title()->html() ?>" />
+	<?php else: ?>
+		<meta property="og:title" content="<?php echo $site->title()->html() ?> | <?php echo $page->title()->html() ?>" />
 	<?php endif ?>
-    <meta property="og:description" content="<?php echo $site->description()->html() ?>" />
-    <?php if($page->isHomepage()): ?>
-      <meta itemprop="name" content="<?php echo $site->title()->html() ?>">
-    <?php else: ?>
-      <meta itemprop="name" content="<?php echo $site->title()->html() ?> | <?php echo $page->title()->html() ?>">
-    <?php endif ?>
-    <meta itemprop="description" content="<?php echo $site->description()->html() ?>">
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="<?php echo html($page->url()) ?>" />
+	<?php if(!$site->ogimage()->empty()): ?>
+		<meta property="og:image" content="<?= $site->ogimage()->toFile()->width(1200)->url() ?>"/>
+	<?php endif ?>
+	<meta property="og:description" content="<?php echo $site->description()->html() ?>" />
+	<?php if($page->isHomepage()): ?>
+		<meta itemprop="name" content="<?php echo $site->title()->html() ?>">
+	<?php else: ?>
+		<meta itemprop="name" content="<?php echo $site->title()->html() ?> | <?php echo $page->title()->html() ?>">
+	<?php endif ?>
+	<meta itemprop="description" content="<?php echo $site->description()->html() ?>">
 	<link rel="shortcut icon" href="<?= url('assets/images/favicon.ico') ?>">
 	<link rel="icon" href="<?= url('assets/images/favicon.ico') ?>" type="image/x-icon">
 
@@ -56,6 +56,32 @@
 </head>
 <body <?php if(!$page->isHomepage()){ echo ' class="page"'; }?>>
 
-<div class="loader"></div>
+	<div class="loader"></div>
 
-<div class="wrapper">
+	<header>
+		<div class="inner">
+			<span class="contact-btn">
+				<a href="<?php echo $pages->find('contact')->url() ?>" data-title="<?php echo $pages->find('contact')->title()->html() ?>" data-target="<?php echo $pages->find('contact')->uri() ?>"><h3><?php echo $pages->find('contact')->title()->html() ?></h3>
+				</a></span>
+
+				<span class="logo">
+					<a href="<?php echo $pages->find('home')->url() ?>" data-title="<?php echo $pages->find('home')->title()->html() ?>" data-target="index">
+						<img src="<?php echo $site->image($site->logo())->resize(300)->url() ?>" alt="<?php echo $site->title()->html() ?>" width="100%" height="auto">
+					</a>
+				</span>
+
+				<nav class="languages" role="navigation">
+					<ul>
+						<?php foreach($site->languages() as $language): ?>
+							<li<?php e($site->language() == $language, ' class="active"') ?>>
+							<a href="<?php echo $pages->find('home')->url($language->code()) ?>">
+							<h3><?php echo html($language->code()) ?></h3>
+							</a>
+						</li>
+					<?php endforeach ?>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div class="wrapper">

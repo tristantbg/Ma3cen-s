@@ -1,8 +1,8 @@
 /* globals $:false */
 var width = $(window).width(),
     height = $(window).height(),
-    $root = "/",
-    $site_title = "Western Promises",
+    $root = "/maecenas",
+    $site_title = "Maecenas",
     logoRotation = 180,
     wpRotationTime = 3;
 $(function() {

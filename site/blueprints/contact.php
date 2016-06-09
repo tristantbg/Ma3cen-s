@@ -1,6 +1,6 @@
 <?php if(!defined('KIRBY')) exit ?>
 
-title: About
+title: Contact
 pages: false
 files: false
 deletable: false
@@ -11,10 +11,3 @@ fields:
   text:
     label: Text
     type:  textarea
-  clients:
-    label: Clients
-    type: structure
-    fields:
-      client:
-        label: Client
-        type: text
