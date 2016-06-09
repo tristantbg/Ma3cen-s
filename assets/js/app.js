@@ -10,41 +10,25 @@ $(function() {
         init: function() {
             $(window).load(function() {
                 $(".loader").fadeOut('fast', function() {
-                    if ($('body').hasClass('page')) {
-                        TweenLite.set($('.intro .logo .wrap'), {
-                            autoAlpha: 1,
-                            scale: 0,
-                            rotation: logoRotation
-                        });
-                    } else {
-                        TweenMax.fromTo($('.intro .logo .wrap'), 2.3, {
-                            autoAlpha: 1,
-                            scale: 0,
-                            rotation: logoRotation
-                        }, {
-                            scale: 1,
-                            rotation: 0,
-                            ease: Back.easeOut.config(1.2)
-                        });
-                    }
+                    if ($('body').hasClass('page')) {} else {}
                 });
             });
             $(window).resize(function(event) {});
             $(document).ready(function($) {
                 $body = $('html, body');
-                $container = $('.wrapper');
+                $container = $('#wrapper');
                 History.Adapter.bind(window, 'statechange', function() {
                     var State = History.getState();
                     console.log(State);
                     var content = State.data;
                     if (content.type == 'page') {
                         $body.addClass('page');
-                        app.loadContent(State.url + '/ajax', $container);
-                    } else if(content.type == 'index') {
-                        app.loadContent(State.url + '/ajax', $container);
+                        app.loadContent(State.url, $container);
+                    } else if (content.type == 'index') {
+                        app.loadContent(State.url, $container);
                     } else {
-                      $body.removeClass('page');
-                      alert('home');
+                        $body.removeClass('page');
+                        alert('home');
                     }
                 });
                 $('body').on('click', '[data-target]', function(e) {
@@ -59,8 +43,6 @@ $(function() {
                     }
                 });
             });
-            app.introAnim();
-            app.sidebarAnim();
         },
         goIndex: function(state) {
             History.pushState({
@@ -92,34 +74,8 @@ $(function() {
                 $page_content.removeClass('peekview');
             });
         },
-        sidebarAnim: function() {
-            var circle = $('.sidebar .logo .circle');
-            var wp = $('.sidebar .logo .wp');
-            var tl = new TimelineMax({
-                repeat: -1,
-                ease: Power1.easeInOut,
-                repeatDelay: 2
-            });
-            tl.to(wp, 2, {
-                scaleX: 1
-            }).to(wp, wpRotationTime, {
-                scaleX: -1,
-            }).to(wp, wpRotationTime, {
-                scaleX: 1
-            });
-            $('.email_us').hover(function() {
-                $page_content.addClass('emailzoom');
-            }, function() {
-                $page_content.removeClass('emailzoom');
-            });
-        },
         loadContent: function(url, target) {
-            $.ajax({
-                url: url,
-                success: function(data) {
-                    $(target).html(data);
-                }
-            });
+            $(target).load(url + ' #wrapper', function(response) {});
         },
         deferImages: function() {
             var imgDefer = document.getElementsByTagName('img');

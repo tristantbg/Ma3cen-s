@@ -84,4 +84,4 @@
 		</div>
 	</header>
 
-	<div class="wrapper">
+	<div id="wrapper">

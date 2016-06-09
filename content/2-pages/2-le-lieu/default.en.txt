@@ -2,7 +2,7 @@ Title: The Place
 
 ----
 
-Text: La cité des métiers d’art accueillera l’excellence de l’artisanat francais dans un environnement culturel où l’histoire prend vie et le savoir-faire se transmet.
+Text: hello place
 
 ----
 
@@ -10,4 +10,4 @@ Bg: lieu.jpg
 
 ----
 
-Url-key: le-prix
+Url-key: the-place

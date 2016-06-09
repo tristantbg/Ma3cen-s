@@ -28,3 +28,7 @@ Partners:
 ----
 
 Bg: home.jpg
+
+----
+
+Url-key: index
