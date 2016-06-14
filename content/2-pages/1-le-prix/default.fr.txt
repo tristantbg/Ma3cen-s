@@ -6,6 +6,7 @@ Text:
 
 Valoriser les audaces de la création et assurer la pérennité des savoir-faire d’excellence est l’esprit de Maecenas. Le «Prix Maecenas» récompense chaque année la collaboration d’un créateur et d’un artisan des métiers d’art. Il entend ainsi valoriser le dialogue entre les disciplines et rappeler combien, en art comme ailleurs, l’intention et l’acte s’inscrivent sur une même ligne, dans un élan partagé.
 
+
 <h3><a class="btn" href="mailto:contact@maecenas.fr" target="_blank">Soumettre une candidature</a></h3>
 
 ----

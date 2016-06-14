@@ -66,7 +66,7 @@ kirbytext::$tags['download'] = array( // give keyword "first" or "last" or the f
       foreach ($files as $file) {
         $text = $file->filename();
         $html .= '<li>';
-        $html .= '<h3><a class="dl" href="'.$file->url().'" target="_blank" download>'.$text.'</a></h3>';
+        $html .= '<button><a class="dl" href="'.$file->url().'" target="_blank" download>'.$text.'</a></button>';
         $html .= '</li>';
       }
 
@@ -75,7 +75,7 @@ kirbytext::$tags['download'] = array( // give keyword "first" or "last" or the f
     } else{
         // switch link text: filename or custom text
         (empty($tag->attr('text'))) ? $text = $files->filename() : $text = $tag->attr('text');
-        return '<h3><a class="dl btn" href="'.$files->url().'" target="_blank" download>'.$text.'</a></h3>';
+        return '<button><a class="dl btn" href="'.$files->url().'" target="_blank" download>'.$text.'</a></button>';
     }
   }
 );
