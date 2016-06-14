@@ -2,7 +2,11 @@ Title: Le Lieu
 
 ----
 
-Text: La cité des métiers d’art accueillera l’excellence de l’artisanat francais dans un environnement culturel où l’histoire prend vie et le savoir-faire se transmet.
+Text: 
+
+La cité des métiers d’art accueillera l’excellence de l’artisanat francais dans un environnement culturel où l’histoire prend vie et le savoir-faire se transmet.
+
+(download: maecenas_citedesmetiersd-art_dp.pdf text: Télécharger la brochure)
 
 ----
 

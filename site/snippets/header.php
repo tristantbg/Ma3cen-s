@@ -85,3 +85,4 @@
 	</header>
 
 	<div id="wrapper">
+	<div class="inner-content">

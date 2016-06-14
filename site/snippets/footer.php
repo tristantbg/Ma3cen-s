@@ -1,3 +1,4 @@
+</div>
 </div> <!-- wrapper -->
 
 <?php if(!$site->googleanalytics()->empty()): ?>

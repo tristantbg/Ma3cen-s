@@ -1,10 +1,10 @@
 <?php snippet('header') ?>
 
 <section class="content langselect">
-	<div class="container">
+	<div class="container animated fadeIn">
 		<?php snippet('logo') ?>
 	</div>
-	<div class="container">
+	<div class="container animated fadeIn">
 		<nav class="languages" role="navigation">
 			<ul>
 				<?php foreach($site->languages() as $language): ?>

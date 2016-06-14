@@ -3,3 +3,8 @@ Title: Contact
 ----
 
 Text: 
+
+*(email: contact@maecenas.fr text: contact@maecenas.fr)
+01 47 66 66 77
+(link: https://goo.gl/maps/dtX57g7GuWw text: 71 av Franklin Roosevelt popup:yes)
+(link: https://goo.gl/maps/dtX57g7GuWw text: 75008 Paris popup:yes)*

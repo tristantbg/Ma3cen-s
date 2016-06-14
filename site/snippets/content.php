@@ -1,14 +1,14 @@
 <?php if ($page->content()->name() == "index"): ?>
 	
 	<?php if(!$page->bg()->empty()):?>
-		<div class="background" style="background-image: url('<?php echo $page->bg()->toFile()->bw()->url() ?>')">
+		<div class="background animated backFadeIn" style="background-image: url('<?php echo $page->bg()->toFile()->bw()->url() ?>')">
 			<div class="vignet"></div>
 		</div>
 	<?php endif ?>
 
 	<section class="content">
 
-		<div class="container">
+		<div class="container animated fadeInUp first">
 
 			<?php $sitePages = $pages->find('pages')->children()->visible() ?>
 			<div class="pages">
@@ -23,7 +23,7 @@
 
 		</div>
 
-		<div class="container partners">
+		<div class="container partners animated fadeInUp second">
 
 			<h3><?php echo l::get('partners') ?></h3>
 			<ul id="partners">
@@ -42,22 +42,22 @@
 <?php else: ?>
 
 	<?php if(!$page->bg()->empty()):?>
-		<div class="background" style="background-image: url('<?php echo $page->bg()->toFile()->bw()->url() ?>')">
+		<div class="background animated backFadeIn" style="background-image: url('<?php echo $page->bg()->toFile()->bw()->url() ?>')">
 			<div class="vignet"></div>
 		</div>
 	<?php endif ?>
 
-	<section class="content">
+	<section class="content<?php if ($page->content()->name() == "contact"){ echo ' contact'; }?>">
 
-		<div class="container title">
+		<div class="container title animated fadeInUp first">
 			<h1><?php echo $page->title()->html() ?></h1>
 		</div>
 
-		<div class="container">
+		<div class="container animated fadeInUp second">
 			<?php echo $page->text()->kt() ?>
 		</div>
 
-		<div class="close-btn">
+		<div class="close-btn animated fadeInUp third">
 		<a href="<?php echo $pages->find('index')->url() ?>" data-title="<?php echo $pages->find('index')->title()->html() ?>" data-target="index">
 			<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 			viewBox="0 0 25 25" style="enable-background:new 0 0 25 25;" xml:space="preserve">
