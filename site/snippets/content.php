@@ -30,7 +30,7 @@
 				<?php foreach($page->partners()->toStructure() as $key => $partner): ?>
 					<li class="partner">
 						<a href="<?php echo $partner->link() ?>" target="_blank">
-							<img src="<?php echo $partner->image()->toFile()->width(500)->url() ?>" alt="<?php echo $partner->name()->html() ?>" width="auto" height="auto">
+							<img src="<?php echo $partner->image()->toFile()->width(400)->url() ?>" alt="<?php echo $partner->name()->html() ?>" width="auto" height="auto">
 						</a>
 					</li>
 				<?php endforeach ?>

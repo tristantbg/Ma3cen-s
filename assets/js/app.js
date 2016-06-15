@@ -2,9 +2,7 @@
 var width = $(window).width(),
     height = $(window).height(),
     $root = "/maecenas",
-    $site_title = "Maecenas",
-    logoRotation = 180,
-    wpRotationTime = 3;
+    $site_title = "Maecenas";
 $(function() {
     var app = {
         init: function() {
