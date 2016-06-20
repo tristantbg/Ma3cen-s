@@ -39,6 +39,40 @@
 
 	</section>
 
+	<script>
+	jQuery(document).ready(function($) {
+		
+	
+		$('#partners').slick({
+			dots: false,
+			infinite: true,
+			speed: 300,
+			slidesToShow: 7,
+			slidesToScroll: 7,
+			responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 5,
+					slidesToScroll: 5,
+					infinite: true,
+					dots: false
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2,
+					infinite: true,
+					dots: false
+				}
+			}
+    ]
+});
+		});
+</script>
+
 <?php else: ?>
 
 	<?php if(!$page->bg()->empty()):?>
@@ -58,23 +92,23 @@
 		</div>
 
 		<div class="close-btn animated fadeInUp third">
-		<a href="<?php echo $pages->find('index')->url() ?>" data-title="<?php echo $pages->find('index')->title()->html() ?>" data-target="index">
-			<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-			viewBox="0 0 25 25" style="enable-background:new 0 0 25 25;" xml:space="preserve">
-			<style type="text/css">
-				.st0{clip-path:url(#SVGID_2_);fill:#CACCC9;}
-			</style>
-			<g>
-				<defs>
-					<rect id="SVGID_1_" width="25" height="25"/>
-				</defs>
-				<clipPath id="SVGID_2_">
-					<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
-				</clipPath>
-				<rect x="-5" y="12.3" transform="matrix(0.7071 0.7071 -0.7071 0.7071 12.5004 -5.1776)" class="st0" width="35" height="0.3"/>
-				<rect x="12.3" y="-5" transform="matrix(0.7056 0.7086 -0.7086 0.7056 12.5372 -5.1774)" class="st0" width="0.3" height="35"/>
-			</g>
-		</svg>
+			<a href="<?php echo $pages->find('index')->url() ?>" data-title="<?php echo $pages->find('index')->title()->html() ?>" data-target="index">
+				<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				viewBox="0 0 25 25" style="enable-background:new 0 0 25 25;" xml:space="preserve">
+				<style type="text/css">
+					.st0{clip-path:url(#SVGID_2_);fill:#CACCC9;}
+				</style>
+				<g>
+					<defs>
+						<rect id="SVGID_1_" width="25" height="25"/>
+					</defs>
+					<clipPath id="SVGID_2_">
+						<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+					</clipPath>
+					<rect x="-5" y="12.3" transform="matrix(0.7071 0.7071 -0.7071 0.7071 12.5004 -5.1776)" class="st0" width="35" height="0.3"/>
+					<rect x="12.3" y="-5" transform="matrix(0.7056 0.7086 -0.7086 0.7056 12.5372 -5.1774)" class="st0" width="0.3" height="35"/>
+				</g>
+			</svg>
 		</a>
 	</div>
 

@@ -2,6 +2,7 @@
 @import '../../node_modules/jeet/stylus/jeet'
 @import '_mixins.styl'
 @import 'normalize.css'
+@import 'slick-theme.css'
 @import '../oembed/oembed.css'
 
 // Media queries
@@ -192,11 +193,18 @@ header
 	left 0
 	width 100%
 	z-index 1000
+	.left
+		h3
+			margin-bottom 8px
+		img
+			margin-right 8px
+			+below($tablet)
+				height 12px
+				margin-right 5px
 	.inner
 		padding $padding
 		flexbox()
 		justify-content space-between
-		align-items center
 	.logo
 		span(1.3/12)
 		max-width 150px
@@ -253,11 +261,25 @@ section.content
 				+below($tablet)
 					padding .2em 0
 	.partners
+		width 75%
 		+above($tablet)
 			position fixed
 			bottom $padding
-			left 12.5%
+			left 20%
+			width 60%
+		.slick-arrow
+			top 60%
+			font-family "Helvetica", "Arial", sans-serif
+		.slick-prev:before
+			content "<"
+			color $primary
+			font-size 20px
+		.slick-next:before 
+			content ">"
+			color $primary
+			font-size 20px
 		ul#partners
+			overflow hidden
 			.partner
 				display inline-block
 				//transition(width)
@@ -265,11 +287,6 @@ section.content
 				margin 0 10px
 				position relative
 				vertical-align middle
-				+below($tablet)
-					display block
-					width 50%
-					text-align center
-					margin 20px auto
 				img
 					display block
 					max-width 100%

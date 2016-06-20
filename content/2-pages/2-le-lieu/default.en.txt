@@ -6,7 +6,7 @@ Text: hello place
 
 ----
 
-Bg: lieu.jpg
+Bg: jardin.jpg
 
 ----
 

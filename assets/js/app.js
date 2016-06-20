@@ -51,7 +51,33 @@ $(function() {
             $body.addClass('leaving');
             setTimeout(function() {
                 $(target).load(url + ' #wrapper .inner-content', function(response) {
-                    setTimeout(function() {$body.removeClass('leaving');},100);
+                    setTimeout(function() {
+                        $body.removeClass('leaving');
+                    }, 100);
+                    $('#partners').slick({
+                        dots: false,
+                        infinite: true,
+                        speed: 300,
+                        slidesToShow: 7,
+                        slidesToScroll: 7,
+                        responsive: [{
+                            breakpoint: 1024,
+                            settings: {
+                                slidesToShow: 5,
+                                slidesToScroll: 5,
+                                infinite: true,
+                                dots: false
+                            }
+                        }, {
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 2,
+                                infinite: true,
+                                dots: false
+                            }
+                        }]
+                    });
                 });
             }, 600);
         },

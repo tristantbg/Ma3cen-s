@@ -10,4 +10,4 @@ La cité des métiers d’art accueillera l’excellence de l’artisanat franca
 
 ----
 
-Bg: lieu.jpg
+Bg: jardin.jpg

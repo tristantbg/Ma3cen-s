@@ -19,6 +19,14 @@ fields:
   keywords:
     label: Keywords
     type:  tags
+  facebook:
+    label: Facebook
+    type:  url
+    width: 1/2
+  instagram:
+    label: Instagram
+    type:  url
+    width: 1/2
   customcss:
     label: Custom CSS
     type: textarea

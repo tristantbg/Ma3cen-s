@@ -24,7 +24,23 @@ Partners:
   name: Ministère de la Culture
   image: culture.png
   link: http://www.culturecommunication.gouv.fr/
+- 
+  name: ENSAAMA
+  image: ensaama.png
+  link: http://www.ensaama.net/
+- 
+  name: Duperré
+  image: duperre.png
+  link: http://duperre.org
+- 
+  name: Estienne
+  image: estienne.png
+  link: http://www.ecole-estienne.paris/
+- 
+  name: École Boulle
+  image: boule.png
+  link: http://www.ecole-boulle.org
 
 ----
 
-Bg: home.jpg
+Bg: intro.jpg
