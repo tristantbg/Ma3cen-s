@@ -61,12 +61,7 @@
 			},
 			{
 				breakpoint: 768,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2,
-					infinite: true,
-					dots: false
-				}
+				settings: "unslick"
 			}
     ]
 });

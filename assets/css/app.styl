@@ -97,7 +97,6 @@ webfont('AGI', 'AGI', true, 'normal')
 
 body,html
 	width 100%
-	height 100%
 	-webkit-text-size-adjust 100%
 	font-family 'AG', 'Times New Roman', serif
 	background $back url('../images/back-texture.jpg') center repeat
@@ -287,6 +286,9 @@ section.content
 				margin 0 10px
 				position relative
 				vertical-align middle
+				+below($tablet)
+					width 70%
+					margin 20px 0
 				img
 					display block
 					max-width 100%

@@ -66,13 +66,13 @@
 				</a></span>
 			<span class="socials">
 				<a href="<?php echo $site->facebook()->html() ?>" target="_blank">
-					<img src="<?php echo url('assets/images/fb.png') ?>" alt="Facebook" width="auto" height="15px">
+					<img src="<?php echo url('assets/images/fb.png') ?>" alt="Facebook" width="auto" height="13px">
 				</a>
 				<a href="<?php echo $site->instagram()->html() ?>" target="_blank">
-					<img src="<?php echo url('assets/images/insta.png') ?>" alt="Instagram" width="auto" height="15px">
+					<img src="<?php echo url('assets/images/insta.png') ?>" alt="Instagram" width="auto" height="13px">
 				</a>
 				<a href="mailto:contact@maecenas.fr" target="_blank">
-					<img src="<?php echo url('assets/images/mail.png') ?>" alt="E-mail" width="auto" height="15px">
+					<img src="<?php echo url('assets/images/mail.png') ?>" alt="E-mail" width="auto" height="13px">
 				</a>
 				</span>
 				</span>
