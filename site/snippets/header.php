@@ -65,12 +65,16 @@
 				<a href="<?php echo $pages->find('contact')->url() ?>" data-title="<?php echo $pages->find('contact')->title()->html() ?>" data-target="<?php echo $pages->find('contact')->uri() ?>"><h3><?php echo $pages->find('contact')->title()->html() ?></h3>
 				</a></span>
 			<span class="socials">
+			<?php if (!$site->facebook()->empty()) : ?>
 				<a href="<?php echo $site->facebook()->html() ?>" target="_blank">
 					<img src="<?php echo url('assets/images/fb.png') ?>" alt="Facebook" width="auto" height="13px">
 				</a>
+			<?php endif ?>
+			<?php if (!$site->instagram()->empty()) : ?>
 				<a href="<?php echo $site->instagram()->html() ?>" target="_blank">
 					<img src="<?php echo url('assets/images/insta.png') ?>" alt="Instagram" width="auto" height="13px">
 				</a>
+			<?php endif ?>
 				<a href="mailto:contact@maecenas.fr" target="_blank">
 					<img src="<?php echo url('assets/images/mail.png') ?>" alt="E-mail" width="auto" height="13px">
 				</a>
