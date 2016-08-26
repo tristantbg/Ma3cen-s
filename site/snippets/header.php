@@ -75,7 +75,7 @@
 					<img src="<?php echo url('assets/images/insta.png') ?>" alt="Instagram" width="auto" height="13px">
 				</a>
 			<?php endif ?>
-				<a href="mailto:contact@maecenas.fr" target="_blank">
+				<a href="mailto:contact@maecenas.fr">
 					<img src="<?php echo url('assets/images/mail.png') ?>" alt="E-mail" width="auto" height="13px">
 				</a>
 				</span>
